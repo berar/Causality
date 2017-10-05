@@ -1,0 +1,168 @@
+{
+  "superCause": {
+    "type": "and",
+    "predicates": [
+      {
+        "type": "cond",
+        "key": "street",
+        "matcher": {
+          "type": "numerical",
+          "impl": "=="
+        },
+        "value": 1.0
+      },
+      {
+        "type": "cond",
+        "key": "heroPosition",
+        "matcher": {
+          "type": "numerical",
+          "impl": "=="
+        },
+        "value": 1.0
+      },
+      {
+        "type": "cond",
+        "key": "villainPutInBB",
+        "matcher": {
+          "type": "numerical",
+          "impl": "<"
+        },
+        "value": 2.875
+      }
+    ]
+  },
+  "causalities": [
+    {
+      "cause": {
+        // (al.preflop == C & limpFold >= 20.0)
+        "type": "and",
+        "predicates": [
+          {
+            "type": "cond",
+            "key": "al.preflop",
+            "matcher": {
+              "type": "string",
+              "impl": "equals"
+            },
+            "value": "C"
+          },
+          {
+            "type": "cond",
+            "key": "limpFold",
+            "matcher": {
+              "type": "numerical",
+              "impl": ">="
+            },
+            "value": 20.0
+          }
+        ]
+      },
+      "effect": "vs limp high fold.rgt"
+    },
+    {
+      "cause": {
+        "type": "and",
+        "predicates": [
+          {
+            "type": "cond",
+            "key": "al.preflop",
+            "matcher": {
+              "type": "string",
+              "impl": "equals"
+            },
+            "value": "C"
+          },
+          {
+            "type": "cond",
+            "key": "limpFold",
+            "matcher": {
+              "type": "numerical",
+              "impl": "<"
+            },
+            "value": 20.0
+          }
+        ]
+      },
+      "effect": "vs limp low fold.rgt"
+    },
+    {
+      "cause": {
+        "type": "and",
+        "predicates": [
+          {
+            "type": "cond",
+            "key": "al.preflop",
+            "matcher": {
+              "type": "string",
+              "impl": "equals"
+            },
+            "value": "R"
+          },
+          {
+            "type": "cond",
+            "key": "villainPutInBB",
+            "matcher": {
+              "type": "numerical",
+              "impl": "<"
+            },
+            "value": 2.125
+          }
+        ]
+      },
+      "effect": "vs 225.rgt"
+    },
+    {
+      "cause": {
+        "type": "and",
+        "predicates": [
+          {
+            "type": "cond",
+            "key": "al.preflop",
+            "matcher": {
+              "type": "string",
+              "impl": "equals"
+            },
+            "value": "R"
+          },
+          {
+            "type": "cond",
+            "key": "villainPutInBB",
+            "matcher": {
+              "type": "numerical",
+              "impl": "<"
+            },
+            "value": 2.375
+          }
+        ]
+      },
+      "effect": "vs 250.rgt"
+    },
+    {
+      "cause": {
+        "type": "and",
+        "predicates": [
+          {
+            "type": "cond",
+            "key": "al.preflop",
+            "matcher": {
+              "type": "string",
+              "impl": "equals"
+            },
+            "value": "R"
+          },
+          {
+            "type": "cond",
+            "key": "villainPutInBB",
+            "matcher": {
+              "type": "numerical",
+              "impl": "<"
+            },
+            "value": 2.625
+          }
+        ]
+      },
+      "effect": "vs 275.rgt"
+    }
+  ],
+  "otherwise": "vs 300.rgt"
+}

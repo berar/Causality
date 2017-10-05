@@ -1,0 +1,60 @@
+{
+  "superCause": {
+    "type": "alwaysTrue"
+  },
+  "causalities": [
+    {
+      "cause": {
+        "type": "not",
+        "predicate": {
+          "type": "and",
+          "predicates": [
+            {
+              "type": "cond",
+              "key": "b",
+              "matcher": {
+                "type": "string",
+                "impl": "equals"
+              },
+              "value": "hello2"
+            },
+            {
+              "type": "cond",
+              "key": "c",
+              "matcher": {
+                "type": "string",
+                "impl": "equals"
+              },
+              "value": "hello3"
+            },
+            {
+              "type": "or",
+              "predicates": [
+                {
+                  "type": "cond",
+                  "key": "c",
+                  "matcher": {
+                    "type": "string",
+                    "impl": "equals"
+                  },
+                  "value": "hero"
+                },
+                {
+                  "type": "cond",
+                  "key": "d",
+                  "matcher": {
+                    "type": "string",
+                    "impl": "equals"
+                  },
+                  "value": "hero"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "effect": "test"
+    }
+  ],
+  "otherwise": "Test2"
+}

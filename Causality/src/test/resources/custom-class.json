@@ -1,0 +1,40 @@
+{
+  "superCause": {
+    "type": "alwaysTrue"
+  },
+  "causalities": [
+    {
+      "cause": {
+        "type": "and",
+        "predicates": [
+          {
+            "type": "cond",
+            "key": "a",
+            "matcher": {
+              "type": "numerical",
+              "impl": "=="
+            },
+            "value": 0.005
+          },
+          {
+            "type": "cond",
+            "key": "b",
+            "matcher": {
+              "type": "string",
+              "impl": "equals"
+            },
+            "value": "test"
+          }
+        ]
+      },
+      "effect": {
+        "name": "A",
+        "age": 1
+      }
+    }
+  ],
+  "otherwise": {
+    "name": "B",
+    "age": 2
+  }
+}

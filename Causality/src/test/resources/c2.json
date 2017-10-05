@@ -1,0 +1,33 @@
+//
+{
+  "superCause": {
+    "type": "alwaysTrue"
+  },
+  "causalities": [
+    {
+      "cause": {
+        "type": "cond",
+        "key": "brojSpratova",
+        "matcher": {
+          "type": "numerical",
+          "impl": "=="
+        },
+        "value": 1.0
+      },
+      "effect": "spratnakuca"
+    },
+    {
+      "cause": {
+        "type": "cond",
+        "key": "brojSpratova",
+        "matcher": {
+          "type": "numerical",
+          "impl": "=="
+        },
+        "value": 2.0
+      },
+      "effect": "dvospratnakuca"
+    }
+  ],
+  "otherwise": "kuca"
+}

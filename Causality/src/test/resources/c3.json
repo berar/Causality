@@ -1,0 +1,33 @@
+//
+{
+  "superCause": {
+    "type": "alwaysTrue"
+  },
+  "causalities": [
+    {
+      "cause": {
+        "type": "cond",
+        "key": "brojSpratova",
+        "matcher": {
+          "type": "numerical",
+          "impl": ">="
+        },
+        "value": 20.0
+      },
+      "effect": "soliter"
+    },
+    {
+      "cause": {
+        "type": "cond",
+        "key": "brojSoba",
+        "matcher": {
+          "type": "numerical",
+          "impl": "<="
+        },
+        "value": 20.0
+      },
+      "effect": "fabrika"
+    }
+  ],
+  "otherwise": "zgrada"
+}

@@ -1,0 +1,43 @@
+{
+  "superCause": {
+    "type": "alwaysTrue"
+  },
+  "causalities": [
+    {
+      "cause": {
+        "type": "and",
+        "predicates": [
+          {
+            "type": "cond",
+            "key": "a",
+            "matcher": {
+              "type": "numerical",
+              "impl": ">="
+            },
+            "value": 1.1
+          },
+          {
+            "type": "cond",
+            "key": "b",
+            "matcher": {
+              "type": "string",
+              "impl": "equals"
+            },
+            "value": "tested"
+          },
+          {
+            "type": "cond",
+            "key": "c",
+            "matcher": {
+              "type": "string",
+              "impl": "equals"
+            },
+            "value": "tester"
+          }
+        ]
+      },
+      "effect": "test"
+    }
+  ],
+  "otherwise": "Test2"
+}

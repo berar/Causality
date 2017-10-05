@@ -1,0 +1,67 @@
+{
+  "superCause": {
+    "type": "alwaysTrue"
+  },
+  "causalities": [
+    {
+      "cause": {
+        "type": "and",
+        "predicates": [
+          {
+            "type": "cond",
+            "key": "povrsina",
+            "matcher": {
+              "type": "numerical",
+              "impl": ">="
+            },
+            "value": 1000.0
+          },
+          {
+            "type": "cond",
+            "key": "brojSpratova",
+            "matcher": {
+              "type": "numerical",
+              "impl": "=="
+            },
+            "value": 0.0
+          },
+          {
+            "type": "cond",
+            "key": "brojSoba",
+            "matcher": {
+              "type": "numerical",
+              "impl": "=="
+            },
+            "value": 0.0
+          }
+        ]
+      },
+      "effect": "njiva"
+    },
+    {
+      "cause": {
+        "type": "cond",
+        "key": "brojSpratova",
+        "matcher": {
+          "type": "numerical",
+          "impl": ">="
+        },
+        "value": 3.0
+      },
+      "effect": "zgrada"
+    },
+    {
+      "cause": {
+        "type": "cond",
+        "key": "brojSpratova",
+        "matcher": {
+          "type": "numerical",
+          "impl": ">="
+        },
+        "value": 1.0
+      },
+      "effect": "kuca"
+    }
+  ],
+  "otherwise": "plac"
+}

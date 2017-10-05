@@ -1,0 +1,34 @@
+{
+  "superCause": {
+    "type": "alwaysTrue"
+  },
+  "causalities": [
+    {
+      "cause": {
+        "type": "and",
+        "predicates": [
+          {
+            "type": "cond",
+            "key": "a",
+            "matcher": {
+              "type": "numerical",
+              "impl": "=="
+            },
+            "value": "as"
+          },
+          {
+            "type": "cond",
+            "key": "b",
+            "matcher": {
+              "type": "string",
+              "impl": "equals"
+            },
+            "value": "test"
+          }
+        ]
+      },
+      "effect": "Test"
+    }
+  ],
+  "otherwise": "Test2"
+}
